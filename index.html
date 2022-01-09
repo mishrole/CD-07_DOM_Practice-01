@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DojoWeather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <nav class="nav bg-notification">
+        <div class="container">
+            <div class="row f-center">
+                <div class="col">
+                    <a href="/" class="nav-title">DojoWeather</a>
+                </div>
+                <div class="col-2">
+                    <ul class="link-list row f-x-end f-y-center">
+                        <li>
+                            <a class="link link-light weather-link" href="/">Burbank</a>
+                        </li>
+                        <li>
+                            <a class="link link-light weather-link" href="/">Chicago</a>
+                        </li>
+                        <li>
+                            <a class="link link-light weather-link" href="/">Dallas</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="row f-y-center border-b-dark p-2">
+            <div class="col">
+                <h2>San Jose</h2>
+            </div>
+            <div class="col-2">
+                <div class="row f-x-end f-y-center">
+                    <span>show temperature in</span>
+                    <select id="temperatureSelect" aria-label="temperature" class="form-select">
+                        <option value="celsius">ºC</option>
+                        <option value="fahrenheit">ºF</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row weather-container" id="weatherContainer"></div>
+    </main>
+
+    <div class="notification fixed-center-bottom" id="notificationContainer">
+        <div class="row container f-center bg-gray p-2 border-dark">
+            <div class="col text-center">
+                <img src="./assets/img/cookie.png" alt="Cookie">
+            </div>
+            <div class="col-5">
+                <h3>Stop! Cookie time</h3>
+                <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic. <a href="/" class="link link-primary">Read more...</a></p>
+            </div>
+            <div class="col text-center">
+                <button class="btn btn-notification" id="acceptBtn">I Accept</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>

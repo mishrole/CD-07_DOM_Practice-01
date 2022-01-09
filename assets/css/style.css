@@ -1,0 +1,313 @@
+/* Global */
+
+:root {
+    --success-color: #93c47d;
+    --danger-color: #dc3545;
+    --warning-color: #f2ca4e;
+    --information-color: #17a2b8;
+    --notification-color: #9fc5f8;
+    --primary-color: #2b78e4;
+    --secondary-color: #cccccc;
+    --dark-color: #000000;
+    --light-color: #FFFFFF;
+    --gray-color: #eeeeee;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.fixed-center-bottom {
+    bottom: 10px;
+    position: fixed;
+}
+
+.container {
+    margin: 0 auto;
+    width: 85%;
+}
+
+.row {
+    display: flex;
+    gap: 1.5em;
+}
+
+.f-y-center {
+    align-items: center;
+}
+
+.f-list {
+    flex-direction: column;
+}
+
+.f-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.f-x-end {
+    justify-content: flex-end;
+}
+
+.f-x-between {
+    justify-content: space-between;
+}
+
+.f-x-evenly {
+    justify-content: space-evenly;
+}
+
+.border-dark {
+    border: 1px solid var(--dark-color);
+}
+
+.border-b-dark {
+    border-bottom: 1px solid var(--dark-color);
+}
+
+.col {
+    flex: 1;
+}
+
+.col-2 {
+    flex: 2;
+}
+
+.col-3 {
+    flex: 3;
+}
+
+.col-4 {
+    flex: 4;
+}
+
+.col-5 {
+    flex: 5;
+}
+
+.card {
+    border: 1px solid var(--dark-color);
+    border-radius: 2px;
+    padding: 1em;
+}
+
+.card-header,
+.card-body {
+    padding: .5em 0;
+}
+
+.btn {
+    border: 1px solid var(--dark-color);
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 1);
+    font-weight: bold;
+    padding: .4em 1em;
+}
+
+.btn:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.btn-warning {
+    background-color: var(--warning-color);
+    color: var(--dark-color);
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    color: var(--dark-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+.btn-notification {
+    background-color: var(--notification-color);
+    color: var(--dark-color);
+}
+
+.link-list {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.link-primary {
+    color: var(--primary-color);
+}
+
+.link-light {
+    color: var(--light-color);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+
+.fw-regular {
+    font-weight: normal;
+}
+
+.bg-secondary {
+    background-color: var(--secondary-color);
+}
+
+.bg-dark {
+    background-color: var(--dark-color);
+}
+
+.bg-gray {
+    background-color: var(--gray-color);
+}
+
+.bg-notification {
+    background-color: var(--notification-color);
+}
+
+.form-control,
+.form-select {
+    background-color: var(--light-color);
+    border: 1px solid var(--dark-color);
+    border-radius: 2px;
+    padding: .375em 1em .375em .8em;
+}
+
+.form-control:focus-visible {
+    outline: var(--secondary-color) solid 1px;
+}
+
+.icon-lg {
+    font-size: 4rem;
+}
+
+.title-lg {
+    padding: .5em 0;
+}
+
+.text-lg {
+    font-size: 1.4rem;
+}
+
+.p-2 {
+    padding: 1em;
+}
+
+.img-icon-circle {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-danger {
+    color: var(--danger-color);
+}
+
+/* Card */
+
+.card {
+    border: 1px solid var(--gray-color);
+    border-radius: 5px;
+}
+
+.card-header,
+.card-body,
+.card-footer {
+    padding: 1em 0;
+}
+
+/* Custom */
+
+.nav {
+    padding: 1em;
+}
+
+.nav-title {
+    color: var(--light-color);
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.weather-container {
+    padding: 2em 0;
+}
+
+.notification {
+    transition: all .2s linear;
+    opacity: 1;
+}
+
+.notification.hide {
+    opacity: 0;
+}
+
+@media only screen and (min-width: 320px) {
+    .weather-container {
+        flex-flow: column;
+    }
+
+    .notification > .row {
+        flex-flow: column;
+    }
+}
+
+@media only screen and (min-width: 728px) {
+    .weather-container {
+        flex-flow: row;
+        flex-wrap: wrap;
+    }
+
+    .weather-2-col {
+        flex-basis: 40%;
+    }
+
+    .fixed-center-bottom {
+        transform: translate(calc(50vw - 50%));
+    }
+
+    .notification > .row {
+        flex-flow: row;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .weather-container {
+        flex-flow: row;
+    }
+}
